@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block main %}
+<!-- TODO add search handler-->
+<center>
+    <div id="search">
+        <div id="logo_container">
+            <img  id="logo" src="/static/images/lightlogo.png">
+        </div>
+        <h3>Enter your game name (game id):</h3>
+        <div id="s_info"></div>
+        <form name="form" method="post" action="" >
+            <input class="form-control mr-sm-2" type="text" placeholder="Find Game" aria-label="Find Game">
+            <button class="btn btn-danger my-2 my-sm-0" type="submit">Find Game!</button>
+        </form>
+    </div>
+</center>
+<style>
+    #submit {
+        margin-top: 10px;
+    }
+
+    #search {
+        margin-left: 25%;
+        margin-right:25%;
+        text-align: center;
+        position: relative;
+    }
+</style>
+{% endblock %}

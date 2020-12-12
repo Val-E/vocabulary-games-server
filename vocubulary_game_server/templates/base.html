@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+              crossorigin="anonymous">
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+              integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+              crossorigin="anonymous">
+        </script>
+        <meta charset="UTF-8">
+        <meta name="description" content="Vocabulary Games: Games to improve language skills for german students.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Val-E">
+        <meta name="application-name" content="Vocabulary Games">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{{title}}</title>
+        <link rel="shortcut icon" href="/static/images/favicon.ico" />
+    </head>
+    <body class="bg-light text-dark">
+        <div class="header bg-success">
+            <header>
+                <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-success">
+                    <a class="navbar-brand" href="/">
+                        <img id="top_logo" src="/static/images/lightlogo.png" width="30" height="30" class="d-inline-block align-top">
+                        Vocabulary Game
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/documentation">Documentation<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/readme">Readme<span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Create Game
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/create/quiz">Quiz</a>
+                                    <a class="dropdown-item" href="/create/memory">Memory</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Select Theme
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="javascript:void(0)" onclick="theme('dark')">Dark</a>
+                                    <a class="dropdown-item" href="javascript:void(0)" onclick="theme('light')">Light</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Find Game" aria-label="Find Game">
+                            <button class="btn btn-danger my-2 my-sm-0" type="submit">Find Game!</button>
+                        </form>
+                    </div>
+                </nav>
+                <div class="container" id="cookie_info"></div>
+            <noscript>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>This website requires javascript! Please enable it!</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </noscript>
+            </header>
+        </div>
+        <div class="container-fluid" id="main">
+            {% block main %}{% endblock %}
+        </div>
+        <footer class="footer mt-auto mt-auto py-3 bg-info text-white">
+            <div class="container">
+                <div class="foot">
+                    <p><span>Download the Server: <a class="flink" href="https://github.com/Val-E/vocabulary-game-server">Download!</a></span></p>
+                    <p><span>Support Mail: val-e@secmail.pro </span></p>
+                    <p><span>Read the readme:<a class="flink" href="/readme">README! </a></span></p>
+                </div>
+                <div class="foot">
+                    <p><span> My Accounts:</span></p>
+                    <p><span><a class="flink" href="https://www.youtube.com/channel/UCZHVM1iSEsHMR-WnAnV69lQ"><img src="/static/images/youtube.ico" width="15" height="15"> Youtube</a></span></p>
+                    <p><span><a class="flink" href="https://twitter.com/Val_E72"><img src="/static/images/twitter.ico" width="15" height="15"> Twitter</a></span></p>
+                    <p><span><a class="flink" href="https://www.instagram.com/val_e72/"><img src="/static/images/instagram.ico" width="15" height="15"> Instagram</a></span></p>
+                </div>
+                <div class="foot">
+                    <span>
+                        <!-- Add an impress here, if you want to run this server publicly!-->
+                    </span>
+                </div>
+                <div class="foot">
+                    <p><span>&copy; Copyright: </span></p>
+                    <p><span>GNU General Public License, Version 3</span></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="/static/js/theme.js"></script>
+</html>
